@@ -1,0 +1,32 @@
+{
+	"name": "gn",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^7.0.0",
+		"@sveltejs/kit": "^2.47.1",
+		"@sveltejs/vite-plugin-svelte": "^6.2.1",
+		"svelte": "^5.41.0",
+		"svelte-check": "^4.3.3",
+		"typescript": "^5.9.3",
+		"vite": "^7.1.10"
+	},
+	"dependencies": {
+		"@bangjelkoski/vite-plugin-node-polyfills": "^0.0.2",
+		"@injectivelabs/networks": "^1.16.23",
+		"@injectivelabs/sdk-ts": "^1.16.23",
+		"@injectivelabs/ts-types": "^1.16.23",
+		"@injectivelabs/utils": "^1.16.23",
+		"@injectivelabs/wallet-strategy": "^1.16.23",
+		"buffer": "^6.0.3"
+	}
+}
