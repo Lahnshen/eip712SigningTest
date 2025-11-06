@@ -13,6 +13,7 @@
     MsgSend,
     recoverTypedSignaturePubKey,
     SIGN_AMINO,
+    SIGN_EIP712_V2,
     TxRestApi,
   } from "@injectivelabs/sdk-ts";
   import { ChainId, EvmChainId } from "@injectivelabs/ts-types";
@@ -291,7 +292,7 @@
     const { txRaw } = createTransaction({
       message: [msg],
       memo: "",
-      signMode: SIGN_AMINO,
+      signMode: SIGN_EIP712_V2,
       fee: getDefaultStdFee(),
       pubKey: publicKeyBase64 /* From previous step */,
       sequence: baseAccount.sequence,
@@ -391,7 +392,7 @@
     const { txRaw } = createTransaction({
       message: [msg],
       memo: "Test",
-      signMode: SIGN_AMINO,
+      signMode: SIGN_EIP712_V2,
       fee: getDefaultStdFee(),
       pubKey: publicKeyBase64 /* From previous step */,
       sequence: baseAccount.sequence,
@@ -434,7 +435,7 @@
   >Sign Transaction V1 With Memo (Not Working)</button
 >
 <button onclick={handleSigningV2}
-  >Sign Transaction V2 Without Memo (Not Working)</button
+  >Sign Transaction V2 Without Memo (Working)</button
 >
 <button onclick={handleSigningV2WithMemo}
   >Sign Transaction V2 With Memo (Not Working)</button
